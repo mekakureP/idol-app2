@@ -121,6 +121,7 @@ for skill in filtered_df["スキル"].unique():
                                 st.write(f"**Vo**: {row['Vo']}")
                                 st.write(f"**Da**: {row['Da']}")
                                 st.write(f"**Vi**: {row['Vi']}")
-                                if skill in ["ドミナント・ハーモニー", "ミューチャル"]:
+                                st.write(f"**メモリアルガシャ**: {row['メモリアルガシャ'] if pd.notna(row['メモリアルガシャ']) else 'データなし'}")
+                                if skill == "ドミナント・ハーモニー":
                                     st.write(f"**副属性**: {row['副属性']}")
                                     st.write(f"**ドミナント**: {row['ドミナント']}")
